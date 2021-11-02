@@ -13,6 +13,7 @@ import Loader from "../components/Shared/Loader";
 import GoTop from "../components/Shared/GoTop";
 import ReactNotification from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
+import Link from "next/link";
 
 export default class MyApp extends App {
   // Preloader
@@ -44,12 +45,11 @@ export default class MyApp extends App {
         <ReactNotification />
         <Component {...pageProps} />
 
-        <a
-          href="https://flyweis.technology/thank_yous.php?comments=Information"
-          class="btn-whatsapp-pulse"
-        >
-          <i class="bx bxl-whatsapp"></i>
-        </a>
+        <Link href="/thankingyou">
+          <a target="_blank" class="btn-whatsapp-pulse">
+            <i class="bx bxl-whatsapp"></i>
+          </a>
+        </Link>
 
         {/* Preloader */}
         <Loader loading={this.state.loading} />
